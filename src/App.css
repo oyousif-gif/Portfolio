@@ -1,0 +1,82 @@
+/* File: App.css | Author: Omer Yousif | StudentID: 301093426 | Date: 2025-09-23 */
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: #0f1115;
+  color: #eaeef3;
+}
+
+/* Layout */
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+.content { min-height: 70vh; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #343840;
+  position: sticky; top: 0; background: rgba(15,17,21,0.95); backdrop-filter: blur(6px); z-index: 10;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.brand img { width: 36px; height: 36px; object-fit: contain; }
+
+/* Nav */
+.nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav a { color: #9db4ff; text-decoration: none; }
+.nav a:hover { color: #c9d6ff; text-decoration: underline; }
+
+/* Footer */
+.site-footer { border-top: 1px solid #343840; }
+.site-footer .container { padding-top: 16px; padding-bottom: 16px; color: #9aa3ad; font-size: 0.95rem; }
+
+/* Hero */
+.hero { padding: 48px 0; }
+.hero h1 { font-size: 3rem; margin: 0 0 8px; }
+.lead { font-size: 1.15rem; color: #c8d0da; margin-bottom: 20px; }
+
+/* Buttons */
+.btn {
+  display: inline-block; padding: 10px 16px; border-radius: 10px;
+  background: #1e2a6b; color: #fff; text-decoration: none; border: none; cursor: pointer;
+}
+.btn:hover { background: #283890; }
+
+/* Grid helpers */
+.grid { display: grid; gap: 18px; }
+.grid.two { grid-template-columns: 1fr; }
+.grid.three { grid-template-columns: 1fr; }
+@media (min-width: 760px) {
+  .grid.two { grid-template-columns: 1fr 1fr; align-items: start; }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Cards */
+.card {
+  background: #141821; border: 1px solid #2a2f3a; border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; min-height: 100%;
+}
+.card img { width: 100%; height: 160px; object-fit: cover; background: #0b0d12; }
+.card-body { padding: 14px; }
+.card-body h3 { margin: 0 0 8px; font-size: 1.1rem; }
+
+/* Forms */
+.form input, .form textarea {
+  width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid #2a2f3a; background: #0b0f16; color: #eaeef3;
+}
+.form textarea { resize: vertical; }
+.form .btn { margin-top: 10px; }
+
+/* Panel (contact info) */
+.panel { background: #111421; border: 1px solid #2a2f3a; border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; }
+
+/* Lists */
+.bullet { padding-left: 18px; }
+.portrait { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; border: 1px solid #2a2f3a; display: block; margin: 0 auto 14px; }
+section h1 { font-size: 2.2rem; margin: 18px 0; }
+
+/* About grid: photo column + text column */
+.about-grid { display: grid; gap: 18px; grid-template-columns: 220px 1fr; align-items: start;}
+@media (max-width: 760px) {.about-grid { grid-template-columns: 1fr; }}
